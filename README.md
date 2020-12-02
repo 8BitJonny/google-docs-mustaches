@@ -1,11 +1,21 @@
-![logo](https://raw.githubusercontent.com/Errorname/google-docs-mustaches/master/logo.png)
+![logo](https://raw.githubusercontent.com/blair-dev/google-docs-mustaches/master/logo.png)
 
 # google-docs-mustaches
 
 📝Interpolate Google Docs files using mustaches and formatters
 
-[![](https://img.shields.io/npm/v/google-docs-mustaches.svg)](https://www.npmjs.com/package/google-docs-mustaches)
-[![](https://img.shields.io/github/license/Errorname/google-docs-mustaches.svg)](https://github.com/Errorname/google-docs-mustaches/blob/master/LICENSE)
+## Our custom Fork
+This is our custom Blair Fork of the source library [Errorname/google-docs-mustaches](https://github.com/Errorname/google-docs-mustaches)
+The reasons for this fork were originally just the quicker process of fixing bugs within package but over the time we also got a few features with which we are ahead of the main library.
+
+### The differences
+#### Bug Fixes, we are ahead with
+
+
+#### Features, we are ahead with
+- this fork allows for the pipe symbol (|) within a formatters params
+- this fork detects placeholders within placeholders and is able to merge them in the right order
+- this fork allows nested placeholders to be contstructed with brackets as well as with curly braces
 
 ## How does this work?
 
@@ -14,7 +24,7 @@
 ## Installation
 
 ```sh
-npm install google-docs-mustaches
+npm install github:blair-dev/google-docs-mustaches
 ```
 
 ## Basic usage
