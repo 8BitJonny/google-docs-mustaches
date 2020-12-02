@@ -4,7 +4,7 @@
 
 📝Interpolate Google Docs files using mustaches and formatters
 
-## Our custom Fork
+## The Blair custom Fork
 This is our custom Blair Fork of the source library [Errorname/google-docs-mustaches](https://github.com/Errorname/google-docs-mustaches)
 The reasons for this fork were originally just the quicker process of fixing bugs within package but over the time we also got a few features with which we are ahead of the main library.
 
