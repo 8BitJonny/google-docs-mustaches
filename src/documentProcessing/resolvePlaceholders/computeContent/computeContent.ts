@@ -11,7 +11,7 @@ export default (
 ): ContentPlaceholder => {
   const rawWithoutBrackets = placeholder.raw.slice(2, -2).trim()
 
-  const [inputRaw, ...transformations] = rawWithoutBrackets.split('|').map(s => s.trim())
+  const [inputRaw, ...transformations] = split(rawWithoutBrackets, '|').map(s => s.trim())
 
   const input = evaluateInput(inputRaw, data, options)
 
@@ -32,6 +32,26 @@ export default (
     pipes,
     output
   } as ContentPlaceholder
+}
+
+// A custom split function that only splits toplevel and not inside parantheses
+const split = (str: string, separator: string): string[] => {
+  const parts = []
+  let nestedLevel = 0
+  let lastSlice = 0
+  for (let i = 0; i < str.length; i++) {
+    if (i === str.length - 1) {
+      parts.push(str.slice(lastSlice))
+    } else if (str[i] === separator && nestedLevel === 0) {
+      parts.push(str.slice(lastSlice, i))
+      lastSlice = i + 1
+    } else if (str[i] === '(') {
+      nestedLevel++
+    } else if (str[i] === ')') {
+      if (nestedLevel > 0) nestedLevel--
+    }
+  }
+  return parts
 }
 
 const evaluateInput = (

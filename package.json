@@ -1,5 +1,5 @@
 {
-  "name": "google-docs-mustaches",
+  "name": "@blair-dev/google-docs-mustaches",
   "version": "1.2.1",
   "description": "📝Interpolate Google Docs files using mustaches and formatters",
   "main": "lib/index.js",
@@ -21,7 +21,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/errorname/google-docs-mustaches.git"
+    "url": "git+https://github.com/blair-dev/google-docs-mustaches.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
   "keywords": [
     "google-doc",
@@ -29,15 +32,15 @@
     "template"
   ],
   "author": {
-    "name": "Thibaud Courtoison",
-    "email": "do.not.press.enter@gmail.com",
-    "url": "https://errorna.me"
+    "name": "Blair Dev Team",
+    "email": "engineering@joinblair.com",
+    "url": "https://joinblair.com"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/errorname/google-docs-mustaches/issues"
+    "url": "https://github.com/blair-dev/google-docs-mustaches/issues"
   },
-  "homepage": "https://github.com/errorname/google-docs-mustaches#readme",
+  "homepage": "https://github.com/blair-dev/google-docs-mustaches#readme",
   "dependencies": {
     "cross-fetch": "^3.0.4",
     "fetch-blob": "^1.0.5"

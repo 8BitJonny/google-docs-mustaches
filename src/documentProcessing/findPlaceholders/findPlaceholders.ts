@@ -14,6 +14,13 @@ const findInContent = (placeholders: Placeholder[], content: StructuralElement[]
         if (e.textRun) {
           let textRun = e.textRun.content
           const matches = textRun.match(/{{([^}]*)}}/gi) || []
+          const allInnerMatches = []
+          for (let parentMatch of matches) {
+            const innerMatches = parentMatch.match(/\[\[([^\]]*)\]\]/gi) || []
+            allInnerMatches.push(...innerMatches)
+          }
+          matches.push(...allInnerMatches)
+
           for (let match of matches) {
             const start = e.startIndex + textRun.indexOf(match)
             textRun = textRun.replace(match, ''.padStart(match.length))

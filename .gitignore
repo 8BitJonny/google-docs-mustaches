@@ -2,3 +2,5 @@ node_modules
 dev/credentials.json
 dev/token.json
 dev/playground.js
+.idea/
+lib/
